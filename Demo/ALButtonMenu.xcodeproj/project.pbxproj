@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20178EF51D9EB780007E5BC1 /* ALButtonViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20178EF41D9EB780007E5BC1 /* ALButtonViewModel.m */; };
+		2019B5E11DA337FE0091DA39 /* ALTouchGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2019B5E01DA337FE0091DA39 /* ALTouchGestureRecognizer.m */; };
+		2019B5E41DA3442A0091DA39 /* UIButton+ALBounce.m in Sources */ = {isa = PBXBuildFile; fileRef = 2019B5E31DA3442A0091DA39 /* UIButton+ALBounce.m */; };
+		2019B5E71DA3476F0091DA39 /* ALMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2019B5E61DA3476F0091DA39 /* ALMenuButton.m */; };
+		20300B9C1E1F3E72001295A6 /* ALMenuCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 20300B9B1E1F3E72001295A6 /* ALMenuCollectionViewLayout.m */; };
+		20300BA01E1F5E6F001295A6 /* ALMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20300B9F1E1F5E6F001295A6 /* ALMenuCollectionViewCell.m */; };
+		2030F2A21D9DC6F90078C0A7 /* UIView+ALPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 2030F2A11D9DC6F90078C0A7 /* UIView+ALPositioning.m */; };
+		203BE36D1D9729A60005D690 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BE36C1D9729A60005D690 /* main.m */; };
+		203BE3701D9729A60005D690 /* ALDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BE36F1D9729A60005D690 /* ALDemoAppDelegate.m */; };
+		203BE3731D9729A60005D690 /* ALDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BE3721D9729A60005D690 /* ALDemoViewController.m */; };
+		203BE3781D9729A60005D690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203BE3771D9729A60005D690 /* Assets.xcassets */; };
+		203BE37B1D9729A60005D690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203BE3791D9729A60005D690 /* LaunchScreen.storyboard */; };
+		203BE3841D973AD00005D690 /* ALButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BE3831D973AD00005D690 /* ALButton.m */; };
+		203BE3871D973C720005D690 /* ALAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BE3861D973C720005D690 /* ALAnimationController.m */; };
+		203BE38A1D973D0F0005D690 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203BE3891D973D0F0005D690 /* UIKit.framework */; };
+		203BE38C1D973D180005D690 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203BE38B1D973D180005D690 /* Foundation.framework */; };
+		203BE3921D9742730005D690 /* ALNavigationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BE3911D9742730005D690 /* ALNavigationCoordinator.m */; };
+		203BE3951D97431D0005D690 /* ALAnimationTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BE3941D97431D0005D690 /* ALAnimationTransitionDelegate.m */; };
+		203C5ED71D9B4C3C00A52EF8 /* ALNavigationCoordinatorViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 203C5ED61D9B4C3C00A52EF8 /* ALNavigationCoordinatorViewModel.m */; };
+		203C5EDA1D9B62F200A52EF8 /* ALNavigationCoordinator+ALSnapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 203C5ED91D9B62F200A52EF8 /* ALNavigationCoordinator+ALSnapping.m */; };
+		20801F171D9C34AD0028B322 /* ALMenuViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20801F161D9C34AD0028B322 /* ALMenuViewControllerViewModel.m */; };
+		20D6706C1E31ABC900F657C4 /* ALDemoRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D6706B1E31ABC900F657C4 /* ALDemoRootViewController.m */; };
+		20DA4A001D9AC28200C6BF3C /* UIBezierPath+ALScaling.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DA49FF1D9AC28100C6BF3C /* UIBezierPath+ALScaling.m */; };
+		20DA4A081D9B313800C6BF3C /* ALMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DA4A071D9B313800C6BF3C /* ALMenuViewController.m */; };
+		20EB58841D9EAEAF00D8291A /* UIColor+ALComplementary.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EB58831D9EAEAF00D8291A /* UIColor+ALComplementary.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20178EF31D9EB780007E5BC1 /* ALButtonViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALButtonViewModel.h; sourceTree = "<group>"; };
+		20178EF41D9EB780007E5BC1 /* ALButtonViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALButtonViewModel.m; sourceTree = "<group>"; };
+		2019B5DF1DA337FE0091DA39 /* ALTouchGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTouchGestureRecognizer.h; sourceTree = "<group>"; };
+		2019B5E01DA337FE0091DA39 /* ALTouchGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTouchGestureRecognizer.m; sourceTree = "<group>"; };
+		2019B5E21DA3442A0091DA39 /* UIButton+ALBounce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ALBounce.h"; sourceTree = "<group>"; };
+		2019B5E31DA3442A0091DA39 /* UIButton+ALBounce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ALBounce.m"; sourceTree = "<group>"; };
+		2019B5E51DA3476F0091DA39 /* ALMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMenuButton.h; sourceTree = "<group>"; };
+		2019B5E61DA3476F0091DA39 /* ALMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMenuButton.m; sourceTree = "<group>"; };
+		2019B5E81DA3485E0091DA39 /* ALButton_ALPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALButton_ALPrivate.h; sourceTree = "<group>"; };
+		201A14F71E28551D00D9CD4C /* ALButtonViewModel_ALPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALButtonViewModel_ALPrivate.h; sourceTree = "<group>"; };
+		20300B9A1E1F3E72001295A6 /* ALMenuCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMenuCollectionViewLayout.h; sourceTree = "<group>"; };
+		20300B9B1E1F3E72001295A6 /* ALMenuCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMenuCollectionViewLayout.m; sourceTree = "<group>"; };
+		20300B9E1E1F5E6F001295A6 /* ALMenuCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMenuCollectionViewCell.h; sourceTree = "<group>"; };
+		20300B9F1E1F5E6F001295A6 /* ALMenuCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMenuCollectionViewCell.m; sourceTree = "<group>"; };
+		2030F29E1D9DABA00078C0A7 /* ALUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUtils.h; sourceTree = "<group>"; };
+		2030F29F1D9DB7DD0078C0A7 /* ALMenuViewController_ALPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMenuViewController_ALPrivate.h; sourceTree = "<group>"; };
+		2030F2A01D9DC6F90078C0A7 /* UIView+ALPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ALPositioning.h"; sourceTree = "<group>"; };
+		2030F2A11D9DC6F90078C0A7 /* UIView+ALPositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ALPositioning.m"; sourceTree = "<group>"; };
+		203BE3681D9729A60005D690 /* ALButtonMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALButtonMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		203BE36C1D9729A60005D690 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		203BE36E1D9729A60005D690 /* ALDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDemoAppDelegate.h; sourceTree = "<group>"; };
+		203BE36F1D9729A60005D690 /* ALDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDemoAppDelegate.m; sourceTree = "<group>"; };
+		203BE3711D9729A60005D690 /* ALDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDemoViewController.h; sourceTree = "<group>"; };
+		203BE3721D9729A60005D690 /* ALDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDemoViewController.m; sourceTree = "<group>"; };
+		203BE3771D9729A60005D690 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		203BE37A1D9729A60005D690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		203BE37C1D9729A60005D690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		203BE3821D973AD00005D690 /* ALButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALButton.h; sourceTree = "<group>"; };
+		203BE3831D973AD00005D690 /* ALButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALButton.m; sourceTree = "<group>"; };
+		203BE3851D973C720005D690 /* ALAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAnimationController.h; sourceTree = "<group>"; };
+		203BE3861D973C720005D690 /* ALAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAnimationController.m; sourceTree = "<group>"; };
+		203BE3891D973D0F0005D690 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		203BE38B1D973D180005D690 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		203BE3901D9742730005D690 /* ALNavigationCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNavigationCoordinator.h; sourceTree = "<group>"; };
+		203BE3911D9742730005D690 /* ALNavigationCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNavigationCoordinator.m; sourceTree = "<group>"; };
+		203BE3931D97431D0005D690 /* ALAnimationTransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAnimationTransitionDelegate.h; sourceTree = "<group>"; };
+		203BE3941D97431D0005D690 /* ALAnimationTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAnimationTransitionDelegate.m; sourceTree = "<group>"; };
+		203C5ED51D9B4C3C00A52EF8 /* ALNavigationCoordinatorViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNavigationCoordinatorViewModel.h; sourceTree = "<group>"; };
+		203C5ED61D9B4C3C00A52EF8 /* ALNavigationCoordinatorViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNavigationCoordinatorViewModel.m; sourceTree = "<group>"; };
+		203C5ED81D9B62F200A52EF8 /* ALNavigationCoordinator+ALSnapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALNavigationCoordinator+ALSnapping.h"; sourceTree = "<group>"; };
+		203C5ED91D9B62F200A52EF8 /* ALNavigationCoordinator+ALSnapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALNavigationCoordinator+ALSnapping.m"; sourceTree = "<group>"; };
+		20801F151D9C34AD0028B322 /* ALMenuViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMenuViewControllerViewModel.h; sourceTree = "<group>"; };
+		20801F161D9C34AD0028B322 /* ALMenuViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMenuViewControllerViewModel.m; sourceTree = "<group>"; };
+		20B4977B1DA48AC100E1E008 /* ALMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMenuItem.h; sourceTree = "<group>"; };
+		20D6706A1E31ABC900F657C4 /* ALDemoRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoRootViewController.h; sourceTree = "<group>"; };
+		20D6706B1E31ABC900F657C4 /* ALDemoRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoRootViewController.m; sourceTree = "<group>"; };
+		20DA49FE1D9AC28100C6BF3C /* UIBezierPath+ALScaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+ALScaling.h"; sourceTree = "<group>"; };
+		20DA49FF1D9AC28100C6BF3C /* UIBezierPath+ALScaling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+ALScaling.m"; sourceTree = "<group>"; };
+		20DA4A061D9B313800C6BF3C /* ALMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMenuViewController.h; sourceTree = "<group>"; };
+		20DA4A071D9B313800C6BF3C /* ALMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMenuViewController.m; sourceTree = "<group>"; };
+		20EB58821D9EAEAF00D8291A /* UIColor+ALComplementary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ALComplementary.h"; sourceTree = "<group>"; };
+		20EB58831D9EAEAF00D8291A /* UIColor+ALComplementary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ALComplementary.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		203BE3651D9729A60005D690 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203BE38C1D973D180005D690 /* Foundation.framework in Frameworks */,
+				203BE38A1D973D0F0005D690 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20300B9D1E1F3E7F001295A6 /* Collection View Layout */ = {
+			isa = PBXGroup;
+			children = (
+				20300B9A1E1F3E72001295A6 /* ALMenuCollectionViewLayout.h */,
+				20300B9B1E1F3E72001295A6 /* ALMenuCollectionViewLayout.m */,
+			);
+			name = "Collection View Layout";
+			sourceTree = "<group>";
+		};
+		20300BA11E1F5E74001295A6 /* Collection View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				20300B9E1E1F5E6F001295A6 /* ALMenuCollectionViewCell.h */,
+				20300B9F1E1F5E6F001295A6 /* ALMenuCollectionViewCell.m */,
+			);
+			name = "Collection View Cell";
+			sourceTree = "<group>";
+		};
+		2030F2A31D9DC6FD0078C0A7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2030F29E1D9DABA00078C0A7 /* ALUtils.h */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		203BE35F1D9729A60005D690 = {
+			isa = PBXGroup;
+			children = (
+				20DA4A041D9B09E600C6BF3C /* Demo */,
+				20DA4A051D9B09F100C6BF3C /* Source */,
+			);
+			sourceTree = "<group>";
+		};
+		203BE3691D9729A60005D690 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				203BE3681D9729A60005D690 /* ALButtonMenu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		203BE36B1D9729A60005D690 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				203BE36C1D9729A60005D690 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		203BE3881D973D0F0005D690 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				203BE38B1D973D180005D690 /* Foundation.framework */,
+				203BE3891D973D0F0005D690 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20B5DD9D1D9C1DE4007B5766 /* Navigation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				203BE3901D9742730005D690 /* ALNavigationCoordinator.h */,
+				203BE3911D9742730005D690 /* ALNavigationCoordinator.m */,
+				203C5ED51D9B4C3C00A52EF8 /* ALNavigationCoordinatorViewModel.h */,
+				203C5ED61D9B4C3C00A52EF8 /* ALNavigationCoordinatorViewModel.m */,
+				203BE3821D973AD00005D690 /* ALButton.h */,
+				2019B5E81DA3485E0091DA39 /* ALButton_ALPrivate.h */,
+				203BE3831D973AD00005D690 /* ALButton.m */,
+				2019B5E51DA3476F0091DA39 /* ALMenuButton.h */,
+				2019B5E61DA3476F0091DA39 /* ALMenuButton.m */,
+				20178EF31D9EB780007E5BC1 /* ALButtonViewModel.h */,
+				201A14F71E28551D00D9CD4C /* ALButtonViewModel_ALPrivate.h */,
+				20178EF41D9EB780007E5BC1 /* ALButtonViewModel.m */,
+				2019B5DF1DA337FE0091DA39 /* ALTouchGestureRecognizer.h */,
+				2019B5E01DA337FE0091DA39 /* ALTouchGestureRecognizer.m */,
+			);
+			name = "Navigation Controller";
+			sourceTree = "<group>";
+		};
+		20DA4A041D9B09E600C6BF3C /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				203BE36E1D9729A60005D690 /* ALDemoAppDelegate.h */,
+				203BE36F1D9729A60005D690 /* ALDemoAppDelegate.m */,
+				20D6706A1E31ABC900F657C4 /* ALDemoRootViewController.h */,
+				20D6706B1E31ABC900F657C4 /* ALDemoRootViewController.m */,
+				203BE3711D9729A60005D690 /* ALDemoViewController.h */,
+				203BE3721D9729A60005D690 /* ALDemoViewController.m */,
+				20EB58851D9EAECE00D8291A /* Categories */,
+				203BE3771D9729A60005D690 /* Assets.xcassets */,
+				203BE3791D9729A60005D690 /* LaunchScreen.storyboard */,
+				203BE37C1D9729A60005D690 /* Info.plist */,
+				203BE36B1D9729A60005D690 /* Supporting Files */,
+				203BE3691D9729A60005D690 /* Products */,
+				203BE3881D973D0F0005D690 /* Frameworks */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
+		20DA4A051D9B09F100C6BF3C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				20B5DD9D1D9C1DE4007B5766 /* Navigation Controller */,
+				20DA4A091D9B324200C6BF3C /* Menu Controller */,
+				20DA4A0D1D9B32D700C6BF3C /* Animations */,
+				20DA4A0E1D9B32E800C6BF3C /* Categories */,
+				2030F2A31D9DC6FD0078C0A7 /* Utilities */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
+		20DA4A091D9B324200C6BF3C /* Menu Controller */ = {
+			isa = PBXGroup;
+			children = (
+				20300B9D1E1F3E7F001295A6 /* Collection View Layout */,
+				20300BA11E1F5E74001295A6 /* Collection View Cell */,
+				20DA4A061D9B313800C6BF3C /* ALMenuViewController.h */,
+				2030F29F1D9DB7DD0078C0A7 /* ALMenuViewController_ALPrivate.h */,
+				20DA4A071D9B313800C6BF3C /* ALMenuViewController.m */,
+				20801F151D9C34AD0028B322 /* ALMenuViewControllerViewModel.h */,
+				20801F161D9C34AD0028B322 /* ALMenuViewControllerViewModel.m */,
+				20B4977B1DA48AC100E1E008 /* ALMenuItem.h */,
+			);
+			name = "Menu Controller";
+			sourceTree = "<group>";
+		};
+		20DA4A0D1D9B32D700C6BF3C /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				203BE3931D97431D0005D690 /* ALAnimationTransitionDelegate.h */,
+				203BE3941D97431D0005D690 /* ALAnimationTransitionDelegate.m */,
+				203BE3851D973C720005D690 /* ALAnimationController.h */,
+				203BE3861D973C720005D690 /* ALAnimationController.m */,
+			);
+			name = Animations;
+			sourceTree = "<group>";
+		};
+		20DA4A0E1D9B32E800C6BF3C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				203C5ED81D9B62F200A52EF8 /* ALNavigationCoordinator+ALSnapping.h */,
+				203C5ED91D9B62F200A52EF8 /* ALNavigationCoordinator+ALSnapping.m */,
+				20DA49FE1D9AC28100C6BF3C /* UIBezierPath+ALScaling.h */,
+				20DA49FF1D9AC28100C6BF3C /* UIBezierPath+ALScaling.m */,
+				2019B5E21DA3442A0091DA39 /* UIButton+ALBounce.h */,
+				2019B5E31DA3442A0091DA39 /* UIButton+ALBounce.m */,
+				2030F2A01D9DC6F90078C0A7 /* UIView+ALPositioning.h */,
+				2030F2A11D9DC6F90078C0A7 /* UIView+ALPositioning.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		20EB58851D9EAECE00D8291A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				20EB58821D9EAEAF00D8291A /* UIColor+ALComplementary.h */,
+				20EB58831D9EAEAF00D8291A /* UIColor+ALComplementary.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		203BE3671D9729A60005D690 /* ALButtonMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 203BE37F1D9729A60005D690 /* Build configuration list for PBXNativeTarget "ALButtonMenu" */;
+			buildPhases = (
+				203BE3641D9729A60005D690 /* Sources */,
+				203BE3651D9729A60005D690 /* Frameworks */,
+				203BE3661D9729A60005D690 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ALButtonMenu;
+			productName = ALShortcutButton;
+			productReference = 203BE3681D9729A60005D690 /* ALButtonMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		203BE3601D9729A60005D690 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Anthony Lobianco";
+				TargetAttributes = {
+					203BE3671D9729A60005D690 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = V5BZVUUAYU;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 203BE3631D9729A60005D690 /* Build configuration list for PBXProject "ALButtonMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 203BE35F1D9729A60005D690;
+			productRefGroup = 203BE3691D9729A60005D690 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				203BE3671D9729A60005D690 /* ALButtonMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		203BE3661D9729A60005D690 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203BE37B1D9729A60005D690 /* LaunchScreen.storyboard in Resources */,
+				203BE3781D9729A60005D690 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		203BE3641D9729A60005D690 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2019B5E11DA337FE0091DA39 /* ALTouchGestureRecognizer.m in Sources */,
+				20DA4A001D9AC28200C6BF3C /* UIBezierPath+ALScaling.m in Sources */,
+				2019B5E41DA3442A0091DA39 /* UIButton+ALBounce.m in Sources */,
+				2019B5E71DA3476F0091DA39 /* ALMenuButton.m in Sources */,
+				203BE3871D973C720005D690 /* ALAnimationController.m in Sources */,
+				203BE3731D9729A60005D690 /* ALDemoViewController.m in Sources */,
+				20300B9C1E1F3E72001295A6 /* ALMenuCollectionViewLayout.m in Sources */,
+				20178EF51D9EB780007E5BC1 /* ALButtonViewModel.m in Sources */,
+				20EB58841D9EAEAF00D8291A /* UIColor+ALComplementary.m in Sources */,
+				203BE3921D9742730005D690 /* ALNavigationCoordinator.m in Sources */,
+				203C5ED71D9B4C3C00A52EF8 /* ALNavigationCoordinatorViewModel.m in Sources */,
+				203BE3951D97431D0005D690 /* ALAnimationTransitionDelegate.m in Sources */,
+				20DA4A081D9B313800C6BF3C /* ALMenuViewController.m in Sources */,
+				20801F171D9C34AD0028B322 /* ALMenuViewControllerViewModel.m in Sources */,
+				20300BA01E1F5E6F001295A6 /* ALMenuCollectionViewCell.m in Sources */,
+				203BE3701D9729A60005D690 /* ALDemoAppDelegate.m in Sources */,
+				203BE3841D973AD00005D690 /* ALButton.m in Sources */,
+				2030F2A21D9DC6F90078C0A7 /* UIView+ALPositioning.m in Sources */,
+				203BE36D1D9729A60005D690 /* main.m in Sources */,
+				203C5EDA1D9B62F200A52EF8 /* ALNavigationCoordinator+ALSnapping.m in Sources */,
+				20D6706C1E31ABC900F657C4 /* ALDemoRootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		203BE3791D9729A60005D690 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				203BE37A1D9729A60005D690 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		203BE37D1D9729A60005D690 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		203BE37E1D9729A60005D690 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		203BE3801D9729A60005D690 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V5BZVUUAYU;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lobianco.ALButtonMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		203BE3811D9729A60005D690 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V5BZVUUAYU;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lobianco.ALButtonMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		203BE3631D9729A60005D690 /* Build configuration list for PBXProject "ALButtonMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				203BE37D1D9729A60005D690 /* Debug */,
+				203BE37E1D9729A60005D690 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		203BE37F1D9729A60005D690 /* Build configuration list for PBXNativeTarget "ALButtonMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				203BE3801D9729A60005D690 /* Debug */,
+				203BE3811D9729A60005D690 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 203BE3601D9729A60005D690 /* Project object */;
+}
