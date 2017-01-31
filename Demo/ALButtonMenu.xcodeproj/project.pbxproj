@@ -87,6 +87,7 @@
 		20DA4A071D9B313800C6BF3C /* ALMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMenuViewController.m; sourceTree = "<group>"; };
 		20EB58821D9EAEAF00D8291A /* UIColor+ALComplementary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ALComplementary.h"; sourceTree = "<group>"; };
 		20EB58831D9EAEAF00D8291A /* UIColor+ALComplementary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ALComplementary.m"; sourceTree = "<group>"; };
+		20FBE7C11E402A0500A5095B /* ALButtonMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALButtonMenu.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +206,7 @@
 		20DA4A051D9B09F100C6BF3C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				20FBE7C11E402A0500A5095B /* ALButtonMenu.h */,
 				20B5DD9D1D9C1DE4007B5766 /* Navigation Controller */,
 				20DA4A091D9B324200C6BF3C /* Menu Controller */,
 				20DA4A0D1D9B32D700C6BF3C /* Animations */,

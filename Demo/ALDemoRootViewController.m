@@ -9,13 +9,9 @@
 
 #import "UIColor+ALComplementary.h"
 
-#import "ALButton.h"
-#import "ALButtonViewModel.h"
+#import "ALButtonMenu.h"
+
 #import "ALDemoViewController.h"
-#import "ALMenuViewController.h"
-#import "ALMenuViewControllerViewModel.h"
-#import "ALNavigationCoordinator.h"
-#import "ALNavigationCoordinatorViewModel.h"
 
 static NSUInteger const kNumberOfMenuItems = 4;
 static NSUInteger const kMenuColumns = 2;
