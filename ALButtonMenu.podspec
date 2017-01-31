@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                      ALButtonMenu is a customizable menu solution for iOS. Create a menu view controller (or use
                      the one provided) and specify the characteristics of the shortcut button. Then tap the button
-                     to quickly show and hide the menu using an animated mask transition effect."
+                     to quickly show and hide the menu using an animated mask transition effect.
                    DESC
   s.homepage     = "https://github.com/lobianco/ALButtonMenu"
   s.screenshots  = "https://raw.githubusercontent.com/lobianco/ALButtonMenu/master/Screenshots/demo1.gif", "https://raw.githubusercontent.com/lobianco/ALButtonMenu/master/Screenshots/demo2.gif"
