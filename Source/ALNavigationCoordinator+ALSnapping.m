@@ -52,7 +52,7 @@
 
 - (CGPoint)al_pointForSnapLocation:(ALNavigationCoordinatorSnapLocation)location
 {
-    ALNavigationCoordinatorSnapLocation snapLocations = self.viewModel.snapLocations;
+    ALNavigationCoordinatorSnapLocation snapLocations __unused = self.viewModel.snapLocations;
     NSParameterAssert(AL_OPTION_SET(snapLocations, location));
     
     NSArray<ALSnapLocationWrapper *> *wrappers = [self al_wrappersForSnapLocations:location];
