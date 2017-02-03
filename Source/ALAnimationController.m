@@ -10,6 +10,7 @@
 #import "UIView+ALLayout.h"
 
 static NSTimeInterval const kAnimationDuration = 0.3;
+static CGFloat const kDimmingViewMaxAlpha = 0.5f;
 static CGFloat const kExpandViewLayerScaleFactor = 1.5f;
 static CGFloat const kCASpringAnimationDamping = 15.f;
 static CGFloat const kCASpringAnimationStiffness = 115.f;
@@ -78,22 +79,26 @@ static CGFloat const kUIKSpringVelocity = 0.f;
     maskLayerAnimation.delegate = self;
     [maskLayer addAnimation:maskLayerAnimation forKey:@"maskLayer"];
 
+    // create the dimming effect as the menu is shown
+    UIView *dimmingView = [self addDimmingViewToContainerView:containerView belowView:toView];
+    dimmingView.alpha = 0.f;
+
     // animate the outgoing view. we can animate these layer-backed views with
     // UIView animation methods.
     //
 
-    if (self.disappearingAnimation == ALNavigationCoordinatorAnimationNone)
-    {
-        return;
-    }
+    BOOL shouldAnimateTransform = self.disappearingAnimation != ALNavigationCoordinatorAnimationNone;
 
-    // set fromView's anchor point to be based on the location of the initial shape
-    // layer, so the expansion animation will look like it's originating from the
-    // location of the initial shape. note that since we're adjusting the anchor
-    // point, we'll also have to adjust the position to keep the view from jumping
-    // to a new location onscreen.
-    //
-    [self adjustAnchorPointAndPositionForView:fromView];
+    if (shouldAnimateTransform)
+    {
+        // set fromView's anchor point to be based on the location of the initial shape
+        // layer, so the expansion animation will look like it's originating from the
+        // location of the initial shape. note that since we're adjusting the anchor
+        // point, we'll also have to adjust the position to keep the view from jumping
+        // to a new location onscreen.
+        //
+        [self adjustAnchorPointAndPositionForView:fromView];
+    }
 
     // no springs here (not needed, the view will be out of sight before the spring
     // effect would be noticed)
@@ -102,7 +107,11 @@ static CGFloat const kUIKSpringVelocity = 0.f;
                           delay:0.
                         options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
-                         fromView.transform = CGAffineTransformScale(CGAffineTransformIdentity, kExpandViewLayerScaleFactor, kExpandViewLayerScaleFactor);
+                         if (shouldAnimateTransform)
+                         {
+                             fromView.transform = CGAffineTransformScale(CGAffineTransformIdentity, kExpandViewLayerScaleFactor, kExpandViewLayerScaleFactor);
+                         }
+                         dimmingView.alpha = kDimmingViewMaxAlpha;
                      }
                      completion:nil];
 
@@ -131,15 +140,19 @@ static CGFloat const kUIKSpringVelocity = 0.f;
     maskLayerAnimation.delegate = self;
     [maskLayer addAnimation:maskLayerAnimation forKey:@"maskLayer"];
 
-    if (self.appearingAnimation == ALNavigationCoordinatorAnimationNone)
+    // create the dimming effect as the menu is hidden
+    UIView *dimmingView = [self addDimmingViewToContainerView:containerView belowView:fromView];
+    dimmingView.alpha = kDimmingViewMaxAlpha;
+
+    BOOL shouldAnimateTransform = self.appearingAnimation != ALNavigationCoordinatorAnimationNone;
+
+    if (shouldAnimateTransform)
     {
-        return;
+        // animate the incoming view
+        [self adjustAnchorPointAndPositionForView:toView];
+
+        toView.layer.transform = CATransform3DScale(CATransform3DIdentity, kExpandViewLayerScaleFactor, kExpandViewLayerScaleFactor, 1.f);
     }
-
-    // animate the incoming view
-    [self adjustAnchorPointAndPositionForView:toView];
-
-    toView.layer.transform = CATransform3DScale(CATransform3DIdentity, kExpandViewLayerScaleFactor, kExpandViewLayerScaleFactor, 1.f);
 
     [UIView animateWithDuration:maskLayerAnimation.duration
                           delay:0.
@@ -147,13 +160,33 @@ static CGFloat const kUIKSpringVelocity = 0.f;
           initialSpringVelocity:kUIKSpringVelocity
                         options:UIViewAnimationOptionCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
-                         toView.transform = CGAffineTransformIdentity;
+                         if (shouldAnimateTransform)
+                         {
+                             toView.transform = CGAffineTransformIdentity;
+                         }
+                         dimmingView.alpha = 0.f;
                      }
                      completion:nil];
 
     // don't animate the outgoing view, it interferes with the mask animation. let
     // the view's controller (our custom menu VC) do the animations.
     //
+}
+
+#pragma mark - Helper methods
+
+- (UIView *)addDimmingViewToContainerView:(UIView *)containerView belowView:(UIView *)view
+{
+    // create the dimming view, which will fade in/out as the menu is shown/hidden
+    UIView *dimmingView = [[UIView alloc] init];
+    dimmingView.translatesAutoresizingMaskIntoConstraints = NO;
+    dimmingView.backgroundColor = [UIColor blackColor];
+
+    // then add and constrain
+    [containerView insertSubview:dimmingView belowSubview:view];
+    [dimmingView al_pinToSuperview];
+
+    return dimmingView;
 }
 
 - (CGFloat)scaleForView:(UIView *)view
