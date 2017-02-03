@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ALButtonMenu"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "A simple, fully customizable menu solution for iOS."
   s.description  = <<-DESC
                      ALButtonMenu is a customizable menu solution for iOS. Create a menu view controller (or use
