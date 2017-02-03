@@ -30,4 +30,25 @@
     self.layer.anchorPoint = anchorPoint;
 }
 
+#pragma mark - Auto Layout
+
+- (void)al_pinToSuperview
+{
+    [self al_pinToView:self.superview];
+}
+
+- (void)al_pinToView:(UIView *)view
+{
+    NSParameterAssert(view != nil);
+    
+    // forgetting to set this is the bane of my professional career
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+
+    // then constrain
+    [self.leadingAnchor constraintEqualToAnchor:view.leadingAnchor].active = YES;
+    [self.trailingAnchor constraintEqualToAnchor:view.trailingAnchor].active = YES;
+    [self.topAnchor constraintEqualToAnchor:view.topAnchor].active = YES;
+    [self.bottomAnchor constraintEqualToAnchor:view.bottomAnchor].active = YES;
+}
+
 @end

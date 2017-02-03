@@ -7,6 +7,8 @@
 
 #import "ALMenuCollectionViewCell.h"
 
+#import "UIView+ALLayout.h"
+
 #import "ALMenuItem.h"
 #import "ALUtils.h"
 
@@ -37,10 +39,7 @@
     else
     {
         [self.contentView addSubview:button];
-        [button.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor].active = YES;
-        [button.topAnchor constraintEqualToAnchor:self.contentView.topAnchor].active = YES;
-        [button.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor].active = YES;
-        [button.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor].active = YES;
+        [button al_pinToSuperview];
     }
 
     _button = button;

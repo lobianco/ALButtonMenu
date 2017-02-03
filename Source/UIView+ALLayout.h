@@ -13,4 +13,9 @@
 
 - (void)al_adjustPositionForNewAnchorPoint:(CGPoint)anchorPoint;
 
+#pragma mark - Auto Layout
+
+- (void)al_pinToSuperview;
+- (void)al_pinToView:(UIView *)view;
+
 @end

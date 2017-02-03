@@ -194,10 +194,7 @@ UICollectionViewDataSource
     [self.collectionView registerClass:[ALMenuCollectionViewCell class] forCellWithReuseIdentifier:kCollectionViewCellReuseIdentifier];
 
     [self.containerView addSubview:self.collectionView];
-    [self.collectionView.leadingAnchor constraintEqualToAnchor:self.containerView.leadingAnchor].active = YES;
-    [self.collectionView.trailingAnchor constraintEqualToAnchor:self.containerView.trailingAnchor].active = YES;
-    [self.collectionView.topAnchor constraintEqualToAnchor:self.containerView.topAnchor].active = YES;
-    [self.collectionView.bottomAnchor constraintEqualToAnchor:self.containerView.bottomAnchor].active = YES;
+    [self.collectionView al_pinToSuperview];
 
     self.containerViewWidthConstraint = [self.containerView.widthAnchor constraintEqualToConstant:self.collectionView.contentSize.width];
     self.containerViewWidthConstraint.active = YES;
