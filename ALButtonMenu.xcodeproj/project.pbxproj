@@ -13,7 +13,7 @@
 		2019B5E71DA3476F0091DA39 /* ALMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2019B5E61DA3476F0091DA39 /* ALMenuButton.m */; };
 		20300B9C1E1F3E72001295A6 /* ALMenuCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 20300B9B1E1F3E72001295A6 /* ALMenuCollectionViewLayout.m */; };
 		20300BA01E1F5E6F001295A6 /* ALMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20300B9F1E1F5E6F001295A6 /* ALMenuCollectionViewCell.m */; };
-		2030F2A21D9DC6F90078C0A7 /* UIView+ALPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 2030F2A11D9DC6F90078C0A7 /* UIView+ALPositioning.m */; };
+		2030F2A21D9DC6F90078C0A7 /* UIView+ALLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2030F2A11D9DC6F90078C0A7 /* UIView+ALLayout.m */; };
 		203BE36D1D9729A60005D690 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BE36C1D9729A60005D690 /* main.m */; };
 		203BE3701D9729A60005D690 /* ALDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BE36F1D9729A60005D690 /* ALDemoAppDelegate.m */; };
 		203BE3731D9729A60005D690 /* ALDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BE3721D9729A60005D690 /* ALDemoViewController.m */; };
@@ -51,8 +51,8 @@
 		20300B9F1E1F5E6F001295A6 /* ALMenuCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMenuCollectionViewCell.m; sourceTree = "<group>"; };
 		2030F29E1D9DABA00078C0A7 /* ALUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUtils.h; sourceTree = "<group>"; };
 		2030F29F1D9DB7DD0078C0A7 /* ALMenuViewController_ALPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMenuViewController_ALPrivate.h; sourceTree = "<group>"; };
-		2030F2A01D9DC6F90078C0A7 /* UIView+ALPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ALPositioning.h"; sourceTree = "<group>"; };
-		2030F2A11D9DC6F90078C0A7 /* UIView+ALPositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ALPositioning.m"; sourceTree = "<group>"; };
+		2030F2A01D9DC6F90078C0A7 /* UIView+ALLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ALLayout.h"; sourceTree = "<group>"; };
+		2030F2A11D9DC6F90078C0A7 /* UIView+ALLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ALLayout.m"; sourceTree = "<group>"; };
 		203BE3681D9729A60005D690 /* ALButtonMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALButtonMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		203BE36C1D9729A60005D690 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		203BE36E1D9729A60005D690 /* ALDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDemoAppDelegate.h; sourceTree = "<group>"; };
@@ -251,8 +251,8 @@
 				20DA49FF1D9AC28100C6BF3C /* UIBezierPath+ALScaling.m */,
 				2019B5E21DA3442A0091DA39 /* UIButton+ALBounce.h */,
 				2019B5E31DA3442A0091DA39 /* UIButton+ALBounce.m */,
-				2030F2A01D9DC6F90078C0A7 /* UIView+ALPositioning.h */,
-				2030F2A11D9DC6F90078C0A7 /* UIView+ALPositioning.m */,
+				2030F2A01D9DC6F90078C0A7 /* UIView+ALLayout.h */,
+				2030F2A11D9DC6F90078C0A7 /* UIView+ALLayout.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -354,7 +354,7 @@
 				20300BA01E1F5E6F001295A6 /* ALMenuCollectionViewCell.m in Sources */,
 				203BE3701D9729A60005D690 /* ALDemoAppDelegate.m in Sources */,
 				203BE3841D973AD00005D690 /* ALButton.m in Sources */,
-				2030F2A21D9DC6F90078C0A7 /* UIView+ALPositioning.m in Sources */,
+				2030F2A21D9DC6F90078C0A7 /* UIView+ALLayout.m in Sources */,
 				203BE36D1D9729A60005D690 /* main.m in Sources */,
 				203C5EDA1D9B62F200A52EF8 /* ALNavigationCoordinator+ALSnapping.m in Sources */,
 				20D6706C1E31ABC900F657C4 /* ALDemoRootViewController.m in Sources */,

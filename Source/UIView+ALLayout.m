@@ -1,13 +1,15 @@
 //
-//  UIView+ALPositioning.m
+//  UIView+ALLayout.m
 //  ALButtonMenu
 //
 //  Copyright © 2016 Anthony Lobianco. All rights reserved.
 //
 
-#import "UIView+ALPositioning.h"
+#import "UIView+ALLayout.h"
 
-@implementation UIView (ALPositioning)
+@implementation UIView (ALLayout)
+
+#pragma mark - Positioning
 
 - (void)al_adjustPositionForNewAnchorPoint:(CGPoint)anchorPoint
 {

@@ -7,7 +7,7 @@
 
 #import "ALMenuViewController_ALPrivate.h"
 
-#import "UIView+ALPositioning.h"
+#import "UIView+ALLayout.h"
 
 #import "ALMenuItem.h"
 #import "ALMenuCollectionViewCell.h"

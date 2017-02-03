@@ -7,7 +7,7 @@
 
 #import "ALAnimationController.h"
 
-#import "UIView+ALPositioning.h"
+#import "UIView+ALLayout.h"
 
 static NSTimeInterval const kAnimationDuration = 0.3;
 static CGFloat const kExpandViewLayerScaleFactor = 1.5f;
