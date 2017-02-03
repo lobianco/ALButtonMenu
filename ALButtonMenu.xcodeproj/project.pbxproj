@@ -200,7 +200,7 @@
 				203BE3691D9729A60005D690 /* Products */,
 				203BE3881D973D0F0005D690 /* Frameworks */,
 			);
-			name = Demo;
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		20DA4A051D9B09F100C6BF3C /* Source */ = {
@@ -213,8 +213,7 @@
 				20DA4A0E1D9B32E800C6BF3C /* Categories */,
 				2030F2A31D9DC6FD0078C0A7 /* Utilities */,
 			);
-			name = Source;
-			path = ../Source;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		20DA4A091D9B324200C6BF3C /* Menu Controller */ = {
@@ -473,7 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V5BZVUUAYU;
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lobianco.ALButtonMenu;
@@ -486,7 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V5BZVUUAYU;
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lobianco.ALButtonMenu;
