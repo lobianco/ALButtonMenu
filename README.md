@@ -33,17 +33,17 @@ Refer to the demo project for an interactive example, or just take a look at the
 // this, or whatever init method you choose to use
 - (instancetype)init 
 {
-	if ((self = [super init]) == NO)
-	{
-		return nil;
-	}
+    if ((self = [super init]) == NO)
+    {
+        return nil;
+    }
 
-	// the layout that we'll use for the menu view controller
-	ALMenuViewControllerLayout layout;
+    // the layout that we'll use for the menu view controller
+    ALMenuViewControllerLayout layout;
 
-	// the menu items will be displayed in a grid with this many columns. however, in landscape mode, 
-	// this value will be used for the number of rows instead.
-	//
+    // the menu items will be displayed in a grid with this many columns. however, in landscape mode, 
+    // this value will be used for the number of rows instead.
+    //
     layout.columns = 2;
 
     // the spacing between menu items
@@ -67,9 +67,9 @@ Refer to the demo project for an interactive example, or just take a look at the
     ALMenuViewController *menuViewController = [[ALMenuViewController alloc] initWithViewModel:menuViewModel];
 
     // an instance of your view controller class
-	MyViewController *viewController = [[MyViewController alloc] init];
+    MyViewController *viewController = [[MyViewController alloc] init];
 
-	// create the view model for the navigation coordinator
+    // create the view model for the navigation coordinator
     ALNavigationCoordinatorViewModel *navViewModel = [[ALNavigationCoordinatorViewModel alloc] init];
 
     // tweak the default values. see ALNavigationCoordinatorViewModel.h for configurable properties. 
@@ -87,7 +87,7 @@ Refer to the demo project for an interactive example, or just take a look at the
     //
     _navigationCoordinator.delegate = self;
 
-	return self;
+    return self;
 }
 
 - (void)viewDidLoad
