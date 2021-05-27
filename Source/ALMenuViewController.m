@@ -34,7 +34,7 @@ UICollectionViewDataSource
 >
 
 @property (nonatomic) UICollectionView *collectionView;
-@property (nonatomic) UIView *containerView;
+@property (nonatomic) UIView<ALMenuItem> *containerView;
 @property (nonatomic, getter=isStatusBarHidden) BOOL statusBarHidden;
 @property (nonatomic, weak) NSLayoutConstraint *containerViewWidthConstraint;
 @property (nonatomic, weak) NSLayoutConstraint *containerViewHeightConstraint;
@@ -161,7 +161,7 @@ UICollectionViewDataSource
         return;
     }
     
-    self.containerView = [[UIView alloc] init];
+    self.containerView = [[UIView<ALMenuItem> alloc] init];
     self.containerView.backgroundColor = [UIColor clearColor];
     self.containerView.translatesAutoresizingMaskIntoConstraints = NO;
     self.containerView.clipsToBounds = NO;
