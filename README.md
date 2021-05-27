@@ -144,11 +144,10 @@ Refer to the demo project for an interactive example, or just take a look at the
 You can reach me anytime at the addresses below. If you use ALButtonMenu, feel free to give me a shoutout on Twitter to let me know how you like it. I'd love to hear your thoughts! 
 
 Github: [lobianco](https://github.com/lobianco) <br>
-Twitter: [@lobianco_irl](https://twitter.com/lobianco_irl) <br>
 Email: [anthony@lobian.co](mailto:anthony@lobian.co) 
 
 ## Credits & License
 
-ALButtonMenu is developed and maintained by Anthony Lobianco ([@lobianco_irl](https://twitter.com/lobianco_irl)). Licensed under the MIT License. Basically, I would appreciate attribution if you use it.
+ALButtonMenu is developed and maintained by Anthony Lobianco. Licensed under the MIT License. Basically, I would appreciate attribution if you use it.
 
 Enjoy!
