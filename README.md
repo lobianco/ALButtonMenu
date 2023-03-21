@@ -4,7 +4,7 @@ ALButtomMenu is a fast, customizable, fully documented menu solution for iOS.
 
 ### Preview
 
-![Preview1](https://github.com/lobianco/ALButtonMenu/blob/master/Screenshots/demo1.gif?raw=true) ![Preview2](https://github.com/lobianco/ALButtonMenu/blob/master/Screenshots/demo2.gif?raw=true)
+![Preview1](https://github.com/lobianco/ALButtonMenu/blob/main/Screenshots/demo1.gif?raw=true) ![Preview2](https://github.com/lobianco/ALButtonMenu/blob/main/Screenshots/demo2.gif?raw=true)
 
 ## Installation
 
