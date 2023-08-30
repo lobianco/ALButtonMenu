@@ -22,17 +22,24 @@ static CGSize const kMenuItemSize = { 100.f, 100.f };
 
 @property (nonatomic) ALNavigationCoordinator *navigationCoordinator;
 
+// these properties are made thread-safe in their getter methods
+@property (nonatomic, copy, readonly) NSArray<UIView<ALMenuItem> *> *dummyMenuItems;
+@property (nonatomic, copy, readonly) NSArray<ALDemoViewController *> *dummyViewControllers;
+
 @end
 
 @implementation ALDemoRootViewController
+
+@synthesize dummyMenuItems = _dummyMenuItems;
+@synthesize dummyViewControllers = _dummyViewControllers;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    NSParameterAssert([self dummyMenuItems].count == [self dummyViewControllers].count);
+    NSParameterAssert(self.dummyMenuItems.count == self.dummyViewControllers.count);
 
-    ALDemoViewController *rootViewController = [self dummyViewControllers][0];
+    ALDemoViewController *rootViewController = self.dummyViewControllers[0];
     UINavigationController *rootNavigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     rootNavigationController.navigationBarHidden = YES;
 
@@ -41,7 +48,7 @@ static CGSize const kMenuItemSize = { 100.f, 100.f };
     layout.itemSpacing = kMenuItemSpacing;
     layout.itemSize = kMenuItemSize;
 
-    NSArray<UIView<ALMenuItem> *> *items = [self dummyMenuItems];
+    NSArray<UIView<ALMenuItem> *> *items = self.dummyMenuItems;
 
     ALMenuViewControllerViewModel *menuViewModel = [[ALMenuViewControllerViewModel alloc] initWithItems:items layout:layout];
     UIViewController<ALMenuViewController> *menuViewController = [[ALMenuViewController alloc] initWithViewModel:menuViewModel];
@@ -65,65 +72,71 @@ static CGSize const kMenuItemSize = { 100.f, 100.f };
 
 - (NSArray<UIView<ALMenuItem> *> *)dummyMenuItems
 {
-    NSMutableArray<UIView<ALMenuItem> *> *buttons = [[NSMutableArray alloc] init];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSMutableArray<UIView<ALMenuItem> *> *buttons = [[NSMutableArray alloc] init];
 
-    for (NSInteger i = 0; i < kNumberOfMenuItems; i++)
-    {
-        ALButtonViewModel *viewModel = [[ALButtonViewModel alloc] init];
-        viewModel.color = [self dummyViewControllers][i].color;
+        for (NSInteger i = 0; i < kNumberOfMenuItems; i++)
+        {
+            ALButtonViewModel *viewModel = [[ALButtonViewModel alloc] init];
+            viewModel.color = self.dummyViewControllers[i].color;
 
-        // since the button hasn't been added to the view heirarchy yet, we can construct
-        // a path with a placeholder size and a proportional corner radius (in this case,
-        // we want 10% rounder corners). then when the view is layed out, the mask path
-        // will be upscaled for us automatically but the proportions will stay the same.
-        //
-        viewModel.maskPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0.f, 0.f, 20.f, 20.f) cornerRadius:2.f];
+            // since the button hasn't been added to the view heirarchy yet, we can construct
+            // a path with a placeholder size and a proportional corner radius (in this case,
+            // we want 10% rounder corners). then when the view is layed out, the mask path
+            // will be upscaled for us automatically but the proportions will stay the same.
+            //
+            viewModel.maskPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0.f, 0.f, 20.f, 20.f) cornerRadius:2.f];
 
-        ALButton *button = [[ALButton alloc] initWithViewModel:viewModel];
+            ALButton *button = [[ALButton alloc] initWithViewModel:viewModel];
 
-        UILabel *numberLabel = [[UILabel alloc] init];
-        numberLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        numberLabel.text = [NSString stringWithFormat:@"%@", @(i + 1)];
-        numberLabel.textColor = [UIColor colorWithWhite:0.1 alpha:1.f];
-        numberLabel.font = [UIFont boldSystemFontOfSize:28.f];
-        numberLabel.textAlignment = NSTextAlignmentCenter;
+            UILabel *numberLabel = [[UILabel alloc] init];
+            numberLabel.translatesAutoresizingMaskIntoConstraints = NO;
+            numberLabel.text = [NSString stringWithFormat:@"%@", @(i + 1)];
+            numberLabel.textColor = [UIColor colorWithWhite:0.1 alpha:1.f];
+            numberLabel.font = [UIFont boldSystemFontOfSize:28.f];
+            numberLabel.textAlignment = NSTextAlignmentCenter;
 
-        [button addSubview:numberLabel];
-        [numberLabel.leadingAnchor constraintEqualToAnchor:button.leadingAnchor].active = YES;
-        [numberLabel.trailingAnchor constraintEqualToAnchor:button.trailingAnchor].active = YES;
-        [numberLabel.topAnchor constraintEqualToAnchor:button.topAnchor].active = YES;
-        [numberLabel.bottomAnchor constraintEqualToAnchor:button.bottomAnchor].active = YES;
+            [button addSubview:numberLabel];
+            [numberLabel.leadingAnchor constraintEqualToAnchor:button.leadingAnchor].active = YES;
+            [numberLabel.trailingAnchor constraintEqualToAnchor:button.trailingAnchor].active = YES;
+            [numberLabel.topAnchor constraintEqualToAnchor:button.topAnchor].active = YES;
+            [numberLabel.bottomAnchor constraintEqualToAnchor:button.bottomAnchor].active = YES;
 
-        [buttons addObject:button];
-    }
+            [buttons addObject:button];
+        }
 
-    return [buttons copy];
+        _dummyMenuItems = [buttons copy];
+    });
+
+    return _dummyMenuItems;
 }
 
 - (NSArray<ALDemoViewController *> *)dummyViewControllers
 {
-    static NSArray *viewControllers = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSMutableArray *mutableViewControllers = [[NSMutableArray alloc] init];
+        NSMutableArray *viewControllers = [[NSMutableArray alloc] init];
+
         for (NSInteger i = 0; i < kNumberOfMenuItems; ++i)
         {
             ALDemoViewController *viewController = [[ALDemoViewController alloc] init];
             viewController.index = i + 1;
             viewController.color = [UIColor al_neutralColor];
-            mutableViewControllers[i] = viewController;
+            viewControllers[i] = viewController;
         }
-        viewControllers = [mutableViewControllers copy];
+
+        _dummyViewControllers = [viewControllers copy];
     });
 
-    return viewControllers;
+    return _dummyViewControllers;
 }
 
 #pragma mark - ALNavigationCoordinatorDelegate
 
 - (UIViewController *)navigationCoordinator:(ALNavigationCoordinator *)navigationCoordinator viewControllerForMenuItemAtIndex:(NSUInteger)index
 {
-    return [self dummyViewControllers][index];
+    return self.dummyViewControllers[index];
 }
 
 #pragma mark - Status bar
